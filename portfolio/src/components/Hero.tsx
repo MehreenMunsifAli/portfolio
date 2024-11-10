@@ -50,7 +50,7 @@ export default function HeroComponent() {
                     </div>
                     {/* Mobile-only intro */}
                     <div className="md:hidden mt-2">
-                        <p>I'm specialized in modern web development, and crafting seamless front-end experiences.</p>
+                        <p>I&apos;m specialized in modern web development, and crafting seamless front-end experiences.</p>
                         <div className="mt-4 flex text-4xl">
                             <FaLinkedin className="mr-6 text-yellow-600" />
                             <FaGithub className="text-yellow-600 "/>

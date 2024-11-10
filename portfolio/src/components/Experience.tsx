@@ -41,7 +41,7 @@ export default function ExperienceComponent() {
                         <div className="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-500 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left">
                             <p className="leading-relaxed text-lg mb-4">
                             Implemented the factory design pattern to seamlessly integrate multiple databases (Supabase, Redis,
-                            MySQL), thereby enhancing the application's flexibility and scalability.<br/>
+                            MySQL), thereby enhancing the application&apos;s flexibility and scalability.<br/>
                             Utilized setup tools to build and package the application, ensuring a streamlined deployment process.<br/>
                             Gained hands-on experience with various technologies, including Linux, REST API, FAST API,
                             OpenAI Specification, Swagger Tools, Docker, MySQL Database, OpenAI, LangChain, and FAAS,

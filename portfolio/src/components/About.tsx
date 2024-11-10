@@ -23,7 +23,7 @@ export default function AboutComponent() {
                         About Me
                     </h1>
                     <p className="mb-8 leading-relaxed">
-                        As a front-end web developer, I'm passionate about creating user-friendly and visually appealing web experiences. With a strong foundation in HTML, CSS, JavaScript, and TypeScript, I specialize in modern frameworks like TailwindCSS and Next.js. I also bring additional skills in Python and Linux, along with some experience in Docker, allowing me to tackle both front-end and back-end challenges. I thrive on exploring new technologies, solving problems, and delivering clean, efficient code. My goal is to continuously learn and grow while contributing to impactful projects.
+                        As a front-end web developer, I&apos;m passionate about creating user-friendly and visually appealing web experiences. With a strong foundation in HTML, CSS, JavaScript, and TypeScript, I specialize in modern frameworks like TailwindCSS and Next.js. I also bring additional skills in Python and Linux, along with some experience in Docker, allowing me to tackle both front-end and back-end challenges. I thrive on exploring new technologies, solving problems, and delivering clean, efficient code. My goal is to continuously learn and grow while contributing to impactful projects.
                     </p>
                     <div className="mb-4">
                         <h2 className="title-font font-bold text-gray-900 tracking-widest text-sm mb-1">

@@ -44,7 +44,7 @@ export default function ContactComponent() {
                 {/* Contact Form */}
                 <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full px-4 py-4 lg:py-8 lg:px-8 mt-8 lg:mt-0 rounded-lg">
                     <h2 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-black">
-                        Let's get in touch
+                        Let&apos;s get in touch
                     </h2>
                     <div className="relative mb-4">
                         <label htmlFor="name" className="leading-7 text-sm text-gray-600">
