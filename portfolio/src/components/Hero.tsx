@@ -3,6 +3,7 @@ import { GrEmptyCircle } from "react-icons/gr";
 import Typewriter from 'typewriter-effect';
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import Link from "next/link";
 
 export default function HeroComponent() {
 
@@ -52,8 +53,8 @@ export default function HeroComponent() {
                     <div className="md:hidden mt-2">
                         <p>I&apos;m specialized in modern web development, and crafting seamless front-end experiences.</p>
                         <div className="mt-4 flex text-4xl">
-                            <FaLinkedin className="mr-6 text-yellow-600" />
-                            <FaGithub className="text-yellow-600 "/>
+                            <Link href={"https://www.linkedin.com/in/mehreenmunsifali/"} target="_blank"><FaLinkedin className=" mr-6 text-yellow-600 hover:cursor-pointer hover:text-blue-800" /></Link>
+                            <Link href={"https://github.com/MehreenMunsifAli"} target="_blank"><FaGithub className=" text-yellow-600 hover:cursor-pointer hover:text-blue-800"/></Link>
                         </div>
                     </div>
                 </div>
