@@ -328,6 +328,7 @@ body {
     .main-container {
         display: flex;
         align-items: center;
+        justify-content: center;
         padding: 56px 40px;
         color: rgb(225, 225, 225);
     }
@@ -372,6 +373,11 @@ body {
     .header-image {
         padding: 0 80px;
         width: 50%;
+        
+    }
+
+    .my_image {
+        margin: auto;
     }
     
     /* About Me */
