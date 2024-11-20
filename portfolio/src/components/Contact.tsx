@@ -1,5 +1,54 @@
+"use client";
+import { useState, FormEvent, ChangeEvent } from "react";
+
+type FormData = {
+    name: string;
+    email: string;
+    message: string;
+};
 
 export default function ContactComponent() {
+    const [formData, setFormData] = useState<FormData>({name: '', email: '', message: ''});
+    const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
+    const [success, setSuccess] = useState<boolean>(false);
+    const [error, setError] = useState<string>('');
+
+    // Handle form input changes
+    const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData((prev) => ({ ...prev, [name]: value }));
+    };
+
+    // Handle form submission
+    const handleSubmit = async (e: FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setError('');
+        setSuccess(false);
+    
+        try {
+            const response = await fetch('/api/send-email', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify(formData),
+            });
+      
+            if (!response.ok) {
+              throw new Error('Failed to send message. Please try again later.');
+            }
+      
+            setSuccess(true);
+            setFormData({ name: '', email: '', message: '' }); // Clear the form
+          } catch (err: unknown) {
+            if (err instanceof Error) {
+              setError(err.message);
+            } else {
+              setError('An unexpected error occurred.');
+            }
+          } finally {
+            setIsSubmitting(false);
+          }
+    };
 
     return(
         <section id="contact" className="text-gray-600 body-font relative">
@@ -46,45 +95,63 @@ export default function ContactComponent() {
                     <h2 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-black">
                         Let&apos;s get in touch
                     </h2>
-                    <div className="relative mb-4">
-                        <label htmlFor="name" className="leading-7 text-sm text-gray-600">
-                        Name
-                        </label>
-                        <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        className="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                        />
-                    </div>
-                    <div className="relative mb-4">
-                        <label htmlFor="email" className="leading-7 text-sm text-gray-600">
-                        Email
-                        </label>
-                        <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        className="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
-                        />
-                    </div>
-                    <div className="relative mb-4">
-                        <label htmlFor="message" className="leading-7 text-sm text-gray-600">
-                        Message
-                        </label>
-                        <textarea
-                        id="message"
-                        name="message"
-                        className="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
-                        defaultValue={""}
-                        />
-                    </div>
-                    <button className="text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">
-                        Send Message
-                    </button>
+                    <form onSubmit={handleSubmit}>
+                        <div className="relative mb-4">    
+                            <label htmlFor="name" className="leading-7 text-sm text-gray-600">
+                                Name
+                            </label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                value={formData.name}
+                                onChange={handleChange}
+                                required
+                                className="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                            />
+                        </div>
+                        <div className="relative mb-4">
+                            <label htmlFor="email" className="leading-7 text-sm text-gray-600">
+                                Email
+                            </label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                value={formData.email}
+                                onChange={handleChange}
+                                required
+                                className="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
+                            />
+                        </div>
+                        <div className="relative mb-4">
+                            <label htmlFor="message" className="leading-7 text-sm text-gray-600">
+                                Message
+                            </label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
+                                className="w-full bg-white rounded border border-gray-300 focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
+                                defaultValue={""}
+                            />
+                        </div>
+                        <button 
+                            type="submit"
+                            disabled={isSubmitting}
+                            className="text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded text-lg">
+                                {isSubmitting ? 'Sending...' : 'Send Message'}
+                        </button>  
+
+                        {success && <p className="text-green-500 mt-2">Your message has been sent successfully!</p>}
+                        {error && <p className="text-red-500 mt-2">{error}</p>}  
+                    </form>
+                   
                 </div>
             </div>
         </section>
 
-    )
-}
+    );
+};
