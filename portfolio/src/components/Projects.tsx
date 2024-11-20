@@ -7,7 +7,7 @@ export default function ProjectsComponent() {
         <section id="project" className="text-gray-600 body-font">
             <div className="container px-10 py-16 mx-auto">
                 {/* Heading */}
-                <div className="flex flex-col text-center w-full mb-6">
+                <div className="flex flex-col text-center w-full mb-16">
                     <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-black">
                         My Projects
                     </h1>

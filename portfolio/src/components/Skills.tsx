@@ -6,7 +6,7 @@ export default function SkillsComponent() {
         <section id="skills" className="text-gray-600 body-font">
             <div className="container px-5 py-16 mx-auto">
                 {/* Heading */}
-                <div className="flex flex-col text-center w-full mb-6">
+                <div className="flex flex-col text-center w-full mb-16">
                     <h1 className="sm:text-4xl text-3xl font-medium title-font text-black">
                         My Skills
                     </h1>
