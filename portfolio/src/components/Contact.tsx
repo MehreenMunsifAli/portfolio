@@ -13,13 +13,13 @@ export default function ContactComponent() {
     const [success, setSuccess] = useState<boolean>(false);
     const [error, setError] = useState<string>('');
 
-    // Handle form input changes
+    //Handle form input changes
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
-    // Handle form submission
+    //Handle form submission
     const handleSubmit = async (e: FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
