@@ -8,7 +8,6 @@ import Link from "next/link";
 export default function HeroComponent() {
 
     return(
-        <section>
             <div className="container mx-auto">
                 {/* Main heading */}
                 <div className="font-serif flex justify-center items-center md:items-end md:pb-16 h-32 md:h-80 w-full text-4xl md:text-9xl italic font-thin">
@@ -59,6 +58,5 @@ export default function HeroComponent() {
                     </div>
                 </div>
             </div>
-        </section>
     )
 }

@@ -34,7 +34,7 @@ export default function ProjectsComponent() {
                                 <p className="leading-relaxed line-clamp-3">
                                     A streamlined app designed to help users create professional resumes effortlessly, with easy-to-use features.
                                 </p>
-                                <Link href={"https://resume-builder-jet-omega.vercel.app/"}>
+                                <Link href={"https://resume-builder-jet-omega.vercel.app/"} target="_blank">
                                     <p className="leading-relaxed text-yellow-500 italic hover:underline">
                                         View Project
                                     </p>
@@ -61,7 +61,7 @@ export default function ProjectsComponent() {
                                 <p className="leading-relaxed line-clamp-3">
                                     A user-friendly platform that allows people to publish and share their blogs effortlessly, with a simple and intuitive interface.
                                 </p>
-                                <Link href={"https://dynamic-blog-sigma.vercel.app/"}>
+                                <Link href={"https://dynamic-blog-sigma.vercel.app/"} target="_blank">
                                     <p className="leading-relaxed text-yellow-500 italic hover:underline">
                                         View Project
                                     </p>
@@ -88,7 +88,7 @@ export default function ProjectsComponent() {
                                 <p className="leading-relaxed line-clamp-3">
                                     A seamless shopping platform designed with an easy-to-go online shopping experience and secure transactions.
                                 </p>
-                                <Link href={"https://restaurant-ui-gamma.vercel.app/"}>
+                                <Link href={"https://restaurant-ui-gamma.vercel.app/"} target="_blank">
                                     <p className="leading-relaxed text-yellow-500 italic hover:underline">
                                         View Project
                                     </p>

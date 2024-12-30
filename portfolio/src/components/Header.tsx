@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { RiDownloadCloudLine } from "react-icons/ri";
 import { useState } from "react";
+import { div } from "framer-motion/client";
 
 export default function HeaderComponent() {
     const [isClicked, setIsClicked] = useState<boolean>(false);
@@ -15,8 +16,9 @@ export default function HeaderComponent() {
     }
 
     return(
-        <header className="sticky z-50 top-0 shadow-md">
-            <nav className="container mx-auto w-full h-16 md:h-24 flex flex-nowrap justify-between items-center bg-gray-200 px-6 md:px-12">
+        
+        <header className="bg-gray-200">
+            <nav className="container mx-auto sticky z-50 top-0 w-full h-16 md:h-24 flex justify-between items-center  px-6 md:px-12">
                 {/* Logo section */}
                 <div className="w-2/3 md:w-[30%] lg:w-1.5/5">
                     <Link href="/">
@@ -105,6 +107,5 @@ export default function HeaderComponent() {
                 </div>
             </nav>
         </header>
-        
     )
 }
