@@ -2,7 +2,6 @@
 import Link from "next/link";
 import { RiDownloadCloudLine } from "react-icons/ri";
 import { useState } from "react";
-import { div } from "framer-motion/client";
 
 export default function HeaderComponent() {
     const [isClicked, setIsClicked] = useState<boolean>(false);
@@ -15,8 +14,7 @@ export default function HeaderComponent() {
         setIsClicked(false)
     }
 
-    return(
-        
+    return (
         <header className="bg-gray-200">
             <nav className="container mx-auto sticky z-50 top-0 w-full h-16 md:h-24 flex justify-between items-center  px-6 md:px-12">
                 {/* Logo section */}
@@ -35,34 +33,34 @@ export default function HeaderComponent() {
 
                 {/* Large screen menu */}
                 <div className="hidden lg:w-2.5/5 lg:flex items-center justify-center text-md font-medium">
-                        <ul className="flex space-x-6 whitespace-nowrap">
-                            <li>
-                                <Link href="#about" className="mr-5 hover:text-red-900 hover:font-semibold">
-                                    About
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#skills" className="mr-5 hover:text-red-900 hover:font-semibold">
-                                    Skills
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#project" className="mr-5 hover:text-red-900 hover:font-semibold">
-                                    Projects
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#experience" className="mr-5 hover:text-red-900 hover:font-semibold">
-                                    Experience
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="#contact" className="mr-5 hover:text-red-900 hover:font-semibold">
-                                    Contact
-                                </Link>
-                            </li>    
-                        </ul>
-                        
+                    <ul className="flex space-x-6 whitespace-nowrap">
+                        <li>
+                            <Link href="#about" className="mr-5 hover:text-red-900 hover:font-semibold">
+                                About
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#skills" className="mr-5 hover:text-red-900 hover:font-semibold">
+                                Skills
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#project" className="mr-5 hover:text-red-900 hover:font-semibold">
+                                Projects
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#experience" className="mr-5 hover:text-red-900 hover:font-semibold">
+                                Experience
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#contact" className="mr-5 hover:text-red-900 hover:font-semibold">
+                                Contact
+                            </Link>
+                        </li>
+                    </ul>
+
                 </div>
 
                 {/* Download CV Button */}
@@ -72,37 +70,37 @@ export default function HeaderComponent() {
                             Download CV
                             <RiDownloadCloudLine className="ml-2 text-xl my-auto " />
                         </button>
-                    </Link>    
+                    </Link>
                 </div>
-                
+
                 {/* Mobile and Medium screen menu  */}
                 <div className={`lg:hidden ${isClicked ? "block" : "hidden"} bg-gray-100 absolute top-16 left-0 w-full mx-auto font-medium z-40`}>
                     <ul className="flex flex-col items-center justify-center py-4 space-y-4">
-                    <li>
-                        <Link href="#about" className="hover:text-red-900 hover:font-semibold" onClick={handleLinkClick}>
-                            About
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#skills" className="hover:text-red-900 hover:font-semibold" onClick={handleLinkClick}>
-                            Skills
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#project" className="hover:text-red-900 hover:font-semibold" onClick={handleLinkClick}>
-                            Projects
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#experience" className="hover:text-red-900 hover:font-semibold" onClick={handleLinkClick}>
-                            Experience
-                        </Link>
-                    </li>
-                    <li>
-                        <Link href="#contact" className="hover:text-red-900 hover:font-semibold" onClick={handleLinkClick}>
-                            Contact
-                        </Link>
-                    </li>
+                        <li>
+                            <Link href="#about" className="hover:text-red-900 hover:font-semibold" onClick={handleLinkClick}>
+                                About
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#skills" className="hover:text-red-900 hover:font-semibold" onClick={handleLinkClick}>
+                                Skills
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#project" className="hover:text-red-900 hover:font-semibold" onClick={handleLinkClick}>
+                                Projects
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#experience" className="hover:text-red-900 hover:font-semibold" onClick={handleLinkClick}>
+                                Experience
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="#contact" className="hover:text-red-900 hover:font-semibold" onClick={handleLinkClick}>
+                                Contact
+                            </Link>
+                        </li>
                     </ul>
                 </div>
             </nav>
