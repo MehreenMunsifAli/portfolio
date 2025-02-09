@@ -86,7 +86,7 @@ export default function SkillsComponent() {
                                 <div className="relative h-1 w-full bg-gray-300 rounded-xl">
                                     <div className="absolute h-1 w-[78%] rounded-xl bg-gradient-to-r from-purple-600 via-pink-300 to-cyan-600"></div>
                                 </div>
-                                <p className="text-right text-blue-500 font-bold">78%</p>
+                                <p className="text-right text-blue-500 font-bold">85%</p>
                             </div>
                         </div>
                     </div>
@@ -143,7 +143,7 @@ export default function SkillsComponent() {
                                 <div className="relative h-1 w-full bg-gray-300 rounded-xl">
                                     <div className="absolute h-1 w-[70%] rounded-xl bg-gradient-to-r from-purple-600 via-pink-300 to-cyan-600"></div>
                                 </div>
-                                <p className="text-right text-blue-500 font-bold">70%</p>
+                                <p className="text-right text-blue-500 font-bold">50%</p>
                             </div>
                         </div>
                     </div>
@@ -162,7 +162,7 @@ export default function SkillsComponent() {
                                 <div className="relative h-1 w-full bg-gray-300 rounded-xl">
                                     <div className="absolute h-1 w-[65%] rounded-xl bg-gradient-to-r from-purple-600 via-pink-300 to-cyan-600"></div>
                                 </div>
-                                <p className="text-right text-blue-500 font-bold">65%</p>
+                                <p className="text-right text-blue-500 font-bold">70%</p>
                             </div>
                         </div>
                     </div>
