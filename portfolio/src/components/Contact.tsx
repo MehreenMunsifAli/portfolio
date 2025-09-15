@@ -82,11 +82,11 @@ export default function ContactComponent() {
                             <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
                                 EMAIL
                             </h2>
-                            <a className="text-yellow-500 leading-relaxed sm:text-xs">mehreen.munsif.ali@gmail.com</a>
+                            <a className="text-yellow-700 leading-relaxed sm:text-xs">mehreen.munsif.ali@gmail.com</a>
                             <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
                                 PHONE
                             </h2>
-                            <p className="leading-relaxed">+92-331-1234567</p>
+                            <p className="leading-relaxed">+92-331-2408036</p>
                         </div>
                     </div>
                 </div>

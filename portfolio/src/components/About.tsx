@@ -29,15 +29,15 @@ export default function AboutComponent() {
                         <h2 className="title-font font-bold text-gray-900 tracking-widest text-sm mb-1">
                             FULL NAME
                         </h2>
-                        <p className="text-md mb-4">Mehreen Munsif Ali</p>
+                        <p className="text-md mb-4 text-blue-800 font-bold">Mehreen Munsif Ali</p>
                         <h2 className="title-font font-bold text-gray-900 tracking-widest text-sm mb-1">
                             EMAIL
                         </h2>
-                        <a className="text-yellow-500 leading-relaxed">mehreen.munsif.ali@gmail.com</a>
+                        <a className="text-blue-800 font-bold leading-relaxed">mehreen.munsif.ali@gmail.com</a>
                         <h2 className="title-font font-bold text-gray-900 tracking-widest text-sm mb-1 mt-4">
                             PHONE
                         </h2>
-                        <p className="leading-relaxed">+92-331-1234567</p>
+                        <p className="leading-relaxed text-blue-800 font-bold">+92-331-2408036</p>
                     </div>
                     <div className="flex justify-center">
                         <Link href={"/assets/cv/Mehreen-Resume.pdf"} target="_blank">
